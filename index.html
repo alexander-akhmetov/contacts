@@ -7,34 +7,28 @@
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <script type="text/javascript"> <!--
-        function UnCryptMailto( s )
-        {
-            var n = 0;
-            var r = "";
-            for( var i = 0; i < s.length; i++)
-            {
-                n = s.charCodeAt( i );
-                if( n >= 8364 )
-                {
-                    n = 128;
-                }
-                r += String.fromCharCode( n - 1 );
-            }
-            return r;
-        }
 
-        function linkTo_UnCryptMailto( s )
-        {
-            location.href=UnCryptMailto( s );
-        }
-        // </script> -->
+    <script type="text/javascript">
+      function gen_mail_to_link(lhs,rhs,subject)
+      {
+      document.write("Email: <a gref=\"mailto");
+      document.write(":" + lhs + "@");
+      document.write(rhs + "?subject=" + subject + "\">" + lhs + "@" + rhs + "<\/A>"); }
+    </script>
+
   </head>
   <body>
 <div id="wrapper" style="text-align: center">
     <div id="yourdiv" style="display: inline-block;">
         <h2>Alexander Akhmetov</h2>
-        <p class="view">Email: <a href="javascript:linkTo_UnCryptMailto('nbjmup;bmfyboefs/blinfupggAzboefy/sv');">alexander [dot] akhmetoff [at] yandex [dot] ru</a></p>
+        <p class="view">
+          <script language="JavaScript" type="text/javascript">
+            gen_mail_to_link('alexander.akhmetoff','yandex.ru')
+          </script>
+          <noscript>
+            <em>Email address protected by JavaScript. Activate JavaScript to see the email.</em>
+          </noscript>
+        </p>
         <p class="view"><a href="https://github.com/alexander-akhmetov/">github account</a></p>
     </div>
 </div>
