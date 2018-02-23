@@ -1,0 +1,12 @@
+version: '3'
+services:
+  proxy:
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile
+    ports:
+      - 127.0.0.1:8080:80
+    environment:
+      - VIRTUAL_HOST=alex.earth
+      - LETSENCRYPT_HOST=alex.earth
+      - LETSENCRYPT_EMAIL=a@alex.earth
